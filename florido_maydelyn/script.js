@@ -12,8 +12,8 @@ let commentArray = [
   {
     name: "Riomalos",
     comment:
-      "These goals are fantastic and show that you’re focused on " +
-      "achieving success!",
+      "These goals are fantastic and show that you’re focused on "
+          + "achieving success!",
     date: new Date("03/19/2025, 11:38:12 PM"),
   },
   {
