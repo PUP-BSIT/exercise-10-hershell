@@ -47,7 +47,7 @@ function addComment() {
 }
 
 function displayComments() {
-  let existingParagraphs = commentsSection.querySelectorAll("p.new-comment");
+  let existingParagraphs = commentsSection.querySelectorAll("p.new-comment, p");
   existingParagraphs.forEach((p) => p.remove());
 
   let sortedComments = comments
