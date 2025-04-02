@@ -8,18 +8,18 @@ const commentData = [
   {
     name: "Florido",
     comment: `Wow!`,
-    date: new Date("03/19/2025, 11:47:28 PM"),
+    date: new Date("03/19/2025, 10:15:28 PM"),
   },
   {
     name: "Siervo",
     comment: `There's always a way for those goals!`,
-    date: new Date("03/19/2025, 11:50:34 PM"),
+    date: new Date("03/19/2025, 10:20:34 PM"),
   },
   {
     name: "Riomalos",
     comment: `These goals are excellent and show that you’re planning
           for a bright future filled with new experiences!`,
-    date: new Date("03/19/2025, 11:52:45 PM"),
+    date: new Date("03/19/2025, 10:33:45 PM"),
   },
 ];
 
@@ -48,8 +48,8 @@ function updateComments() {
     const commentDate = new Date(comment.date);
 
     newComment.innerHTML = `
-          ${comment.name}: ${comment.comment}
-          (${commentDate.toLocaleString()})`;
+        ${comment.name}: ${comment.comment}
+        (${commentDate.toLocaleString()})`;
 
     commentContainer.append(newComment);
   }
@@ -65,7 +65,7 @@ function sortComments() {
       return b.date - a.date;
     }
   });
-  
+
   updateComments();
 }
 
@@ -78,7 +78,7 @@ function clearElement() {
 
 commentName.addEventListener("input", validateComment);
 commentMessage.addEventListener("input", validateComment);
-commentButton.addEventListener("click", addComment);
+commentButton.addEventListener("click", clearElement);
 sortType.addEventListener("change", sortComments);
 
 sortComments();
