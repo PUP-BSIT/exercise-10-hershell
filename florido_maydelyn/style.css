@@ -91,7 +91,7 @@ ul {
   width: 100%;
 }
 
-.groupmate-comments {
+.comments {
   border: 1px solid;
   border-radius: 10px;
   margin-right: 20px;
@@ -281,6 +281,18 @@ button {
   border-radius: 5px;
 }
 
+#sort_toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 5px;
+  border: 2px solid rgb(102, 98, 98);
+  background-color: rgb(61, 53, 53);
+  color: rgb(160, 160, 160);
+}
+
 @media (max-width: 426px) {
   body {
     font-size: 15px;
@@ -359,7 +371,7 @@ button {
     align-items: center;
   }
 
-  .groupmate-comments {
+  .comments {
     width: calc(100% - 40px);
     margin-right: 0px;
     margin-bottom: 10px;
