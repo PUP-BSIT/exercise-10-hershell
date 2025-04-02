@@ -22,8 +22,8 @@ function addElement() {
 }
 
 function clearInput() {
-  document.getElementById("comment_name").value = "";
-  document.getElementById("comment").value = "";
+  nameInput.value = "";
+  commentInput.value = "";
 }
 
 document.getElementById("comment_name").addEventListener("input", toggleButton);
