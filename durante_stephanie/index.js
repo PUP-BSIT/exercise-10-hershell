@@ -25,7 +25,8 @@ const commentData = [
 
 function validateComment() {
   commentButton.disabled = !(
-        commentName.value.trim() && commentMessage.value.trim());
+        commentName.value.trim() && commentMessage.value.trim()
+      );
 }
 
 function addComment() {
