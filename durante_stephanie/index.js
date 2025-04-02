@@ -39,6 +39,21 @@ function addComment() {
   sortComments();
 }
 
+function updateComments() {
+  commentContainer.innerHTML = "";
+
+  for (const comment of commentData) {
+    const newComment = document.createElement("li");
+    const commentDate = new Date(comment.date);
+
+    newComment.innerHTML = `
+        ${comment.name}: ${comment.comment}
+        (${commentDate.toLocaleString()})`;
+
+    commentContainer.append(newComment);
+  }
+}
+
 commentName.addEventListener("input", validateComment);
 commentMessage.addEventListener("input", validateComment);
 commentButton.addEventListener("click", addComment);
