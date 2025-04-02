@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Riomalos Zyrrah Feil Page</title>
   </head>
 
@@ -39,7 +39,7 @@
         <li>The design is elegant! -Steph</li>
         <li>
           Florido: Zyrrah is a quick learner who effortlessly grasps new
-          concepts and adapts with remarkable speed and efficiency.
+              concepts and adapts with remarkable speed and efficiency.
         </li>
         <li>Zyrrah is precise and professional in teamwork. -Siervo</li>
       </ul>
@@ -48,12 +48,12 @@
     <div class="gallery">
       <h2>Gallery</h2>
       <div class="gallery-grid">
-        <img src="./image/jisooAmor.png" alt="image" />
-        <img src="./image/jisooAmor.png" alt="image" />
-        <img src="./image/jisooAmor.png" alt="image" />
-        <img src="./image/jisooAmor.png" alt="image" />
-        <img src="./image/jisooAmor.png" alt="image" />
-        <img src="./image/jisooAmor.png" alt="image" />
+        <img src="./image/jisooAmor.png" alt="image"/>
+        <img src="./image/jisooAmor.png" alt="image"/>
+        <img src="./image/jisooAmor.png" alt="image"/>
+        <img src="./image/jisooAmor.png" alt="image"/>
+        <img src="./image/jisooAmor.png" alt="image"/>
+        <img src="./image/jisooAmor.png" alt="image"/>
       </div>
     </div>
 
@@ -63,52 +63,52 @@
         <div class="forms">
           <label for="email">Email:</label>
           <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@gmail.com"
-            required />
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required/>
 
           <label for="fname">Full Name:</label>
           <input
-            type="text"
-            id="fname"
-            name="fname"
-            placeholder="Full Name"
-            required />
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Full Name"
+              required/>
         </div>
 
         <div class="forms">
           <label for="age">Age:</label>
           <input
-            type="number"
-            id="age"
-            name="age"
-            placeholder="Enter your age"
-            required />
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Enter your age"
+              required/>
 
           <label for="subject">Subject:</label>
           <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="Enter subject"
-            required />
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Enter subject"
+              required/>
         </div>
 
         <div class="for-copy">
           <label for="copy">Send me a copy</label>
-          <input type="checkbox" id="copy" name="copy" />
+          <input type="checkbox" id="copy" name="copy"/>
         </div>
 
         <div class="forms">
           <label for="message">Message:</label>
           <textarea
-            name="message"
-            id="message"
-            placeholder="Your Message"
-            rows="4"
-            required></textarea>
+              name="message"
+              id="message"
+              placeholder="Your Message"
+              rows="4"
+              required></textarea>
         </div>
 
         <div class="forms">
@@ -136,21 +136,31 @@
         <p>Keep up with your goals and this design! -Siervo</p>
       </div>
 
+      <div class="sort-buttons">
+        <label>Sort by:</label>
+        <button id="sort-asc" onclick="changeSortOrder('asc')">
+          Ascending
+        </button>
+        <button id="sort-desc" onclick="changeSortOrder('desc')">
+          Descending
+        </button>
+      </div>
+
       <div class="comment-form">
         <form>
           <fieldset>
             <legend>Leave a Comment</legend>
             <input
-              type="text"
-              id="name_comment"
-              placeholder="Your Name"
-              oninput="checkForm()"/>
+                type="text"
+                id="name_comment"
+                placeholder="Your Name"
+                oninput="checkForm()"/>
             <textarea
-              id="comment"
-              placeholder="Your Comment"
-              rows="5"
-              oninput="checkForm()"></textarea>
-            <button id="comment_button" disabled="true">Comment</button>
+                id="comment"
+                placeholder="Your Comment"
+                rows="5"
+                oninput="checkForm()"></textarea>
+            <button id="comment_button" disabled>Comment</button>
           </fieldset>
         </form>
       </div>
