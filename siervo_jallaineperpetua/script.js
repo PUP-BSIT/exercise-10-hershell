@@ -4,7 +4,25 @@ let commentButton = document.getElementById("comment_button");
 let commentsSection = document.querySelector(".group-comment");
 let sortButton = document.getElementById("sort_button");
 
-let comments = [];
+let comments = [
+  {
+    name: "Durante",
+    comment: "I hope you reach all your goals!",
+    timestamp: new Date("03/19/2025 23:50:32").getTime(),
+  },
+  {
+    name: "Florido",
+    comment: "Wow!",
+    timestamp: new Date("03/19/2025 23:38:12").getTime(),
+  },
+  {
+    name: "Riomalos",
+    comment:
+      "These goals are great and show a strong desire to grow and learn!",
+    timestamp: new Date("03/19/2025 23:25:47").getTime(),
+  },
+];
+
 let ascending = true;
 
 function toggleButton() {
@@ -16,7 +34,7 @@ function toggleButton() {
 function addComment() {
   let name = nameInput.value.trim();
   let comment = commentInput.value.trim();
-  let timestamp = new Date();
+  let timestamp = new Date().getTime();
 
   if (name && comment) {
     comments.push({ name, comment, timestamp });
@@ -41,7 +59,9 @@ function displayComments() {
   sortedComments.forEach(({ name, comment, timestamp }) => {
     let newComment = document.createElement("p");
     newComment.classList.add("new-comment");
-    newComment.textContent = `${name}: ${comment} (${timestamp.toLocaleString()})`;
+    newComment.textContent = `${name}: ${comment} (${new Date(
+      timestamp
+    ).toLocaleString()})`;
     commentsSection.appendChild(newComment);
   });
 }
@@ -58,3 +78,5 @@ sortButton.addEventListener("click", toggleSort);
 nameInput.addEventListener("input", toggleButton);
 commentInput.addEventListener("input", toggleButton);
 commentButton.addEventListener("click", addComment);
+
+displayComments();
