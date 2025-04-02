@@ -32,16 +32,11 @@ function addComment() {
   const newComment = {
     name: commentName.value,
     comment: commentMessage.value,
+    date: new Date(),
   };
 
-  const newCommentElement = document.createElement("li");
-  newCommentElement.innerHTML = `${newComment.name}: ${newComment.comment}`;
-
-  commentContainer.appendChild(newCommentElement);
-
-  commentName.value = "";
-  commentMessage.value = "";
-  validateComment();
+  commentData.push(newComment);
+  sortComments();
 }
 
 commentName.addEventListener("input", validateComment);
