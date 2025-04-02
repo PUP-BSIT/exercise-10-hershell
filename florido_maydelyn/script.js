@@ -53,6 +53,18 @@ function sortComments() {
   });
 }
 
+function displayComments() {
+  let commentSection = document.querySelector("#groupmate-comments");
+  commentSection.innerHTML = "";
+
+  commentArray.forEach((comment) => {
+    let commentHolder = document.createElement("p");
+    commentHolder.innerHTML = `${comment.name}: ${comment.comment}
+        (${comment.date.toLocaleString()})`;
+    commentSection.append(commentHolder);
+  });
+}
+
 function clearInput() {
   nameInput.value = "";
   commentInput.value = "";
