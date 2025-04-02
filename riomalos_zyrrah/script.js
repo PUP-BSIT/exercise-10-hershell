@@ -1,3 +1,4 @@
+let sortOrder = 'asc';
 let commentForm = document.querySelector(".comment-form form");
 let commentsSection = document.querySelector(".teammate-comment");
 
@@ -49,6 +50,12 @@ function appendComment(event) {
 
   checkForm();
   displayComments(sortComments(comments, sortOrder));
+}
+
+function sortComments(commentsArray, order = 'asc') {
+  return commentsArray.sort((a, b) => {
+    return order === 'asc' ? a.date - b.date : b.date - a.date;
+  });
 }
 
 commentForm.addEventListener("submit", appendComment);
