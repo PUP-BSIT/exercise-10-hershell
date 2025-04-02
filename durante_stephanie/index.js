@@ -8,18 +8,18 @@ const commentData = [
   {
     name: "Florido",
     comment: `Wow!`,
-    date: new Date("03/19/2025, 10:15:28 PM"),
+    date: new Date("03/19/2025, 11:47:28 PM"),
   },
   {
     name: "Siervo",
     comment: `There's always a way for those goals!`,
-    date: new Date("03/19/2025, 10:20:34 PM"),
+    date: new Date("03/19/2025, 11:50:34 PM"),
   },
   {
     name: "Riomalos",
-    comment: `These goals are excellent and show that you’re planning 
+    comment: `These goals are excellent and show that you’re planning
           for a bright future filled with new experiences!`,
-    date: new Date("03/19/2025, 10:33:45 PM"),
+    date: new Date("03/19/2025, 11:52:45 PM"),
   },
 ];
 
@@ -56,6 +56,7 @@ function updateComments() {
 
 function sortComments() {
   const ascendingSort = "ascending";
+
   commentData.sort((a, b) => {
     if (sortType.value == ascendingSort) {
       return a.date - b.date;
@@ -63,6 +64,7 @@ function sortComments() {
       return b.date - a.date;
     }
   });
+  
   updateComments();
 }
 
