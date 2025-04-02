@@ -43,6 +43,16 @@ function addElement() {
   toggleButton();
 }
 
+function sortComments() {
+  commentArray.sort((a, b) => {
+    if (sortOrder === "ascending") {
+      return a.date - b.date;
+    } else {
+      return b.date - a.date;
+    }
+  });
+}
+
 function clearInput() {
   nameInput.value = "";
   commentInput.value = "";
