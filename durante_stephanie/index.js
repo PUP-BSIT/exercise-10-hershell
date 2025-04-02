@@ -12,7 +12,7 @@ const commentData = [
   },
   {
     name: "Siervo",
-    comment: `wow`,
+    comment: `There's always a way for those goals!`,
     date: new Date("03/19/2025, 10:20:34 PM"),
   },
   {
@@ -57,7 +57,6 @@ function updateComments() {
 
 function sortComments() {
   const ascendingSort = "ascending";
-
   commentData.sort((a, b) => {
     if (sortType.value == ascendingSort) {
       return a.date - b.date;
@@ -65,7 +64,6 @@ function sortComments() {
       return b.date - a.date;
     }
   });
-
   updateComments();
 }
 
