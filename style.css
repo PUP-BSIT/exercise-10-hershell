@@ -1,5 +1,5 @@
 body {
-  background-image: url("background.jpg");
+  background-image: url("./image/background.jpg");
   font-family: "Lucida Sans", "Lucida Sans Regular";
   background-color: #e4979d;
   display: flex;
