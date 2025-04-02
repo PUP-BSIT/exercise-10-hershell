@@ -39,6 +39,8 @@ function addElement() {
 
   commentArray.push(comment);
 
+  sortComments();
+  displayComments();
   clearInput();
   toggleButton();
 }
