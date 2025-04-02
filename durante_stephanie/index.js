@@ -18,15 +18,14 @@ const commentData = [
   {
     name: "Riomalos",
     comment: `These goals are excellent and show that you’re planning 
-    for a bright future filled with new experiences!`,
+          for a bright future filled with new experiences!`,
     date: new Date("03/19/2025, 10:33:45 PM"),
   },
 ];
 
 function validateComment() {
   commentButton.disabled = !(
-    commentName.value.trim() && commentMessage.value.trim()
-  );
+        commentName.value.trim() && commentMessage.value.trim());
 }
 
 function addComment() {
@@ -48,8 +47,8 @@ function updateComments() {
     const commentDate = new Date(comment.date);
 
     newComment.innerHTML = `
-        ${comment.name}: ${comment.comment}
-        (${commentDate.toLocaleString()})`;
+          ${comment.name}: ${comment.comment}
+          (${commentDate.toLocaleString()})`;
 
     commentContainer.append(newComment);
   }
