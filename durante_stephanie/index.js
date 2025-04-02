@@ -54,6 +54,20 @@ function updateComments() {
   }
 }
 
+function sortComments() {
+  const ascendingSort = "ascending";
+
+  commentData.sort((a, b) => {
+    if (sortType.value == ascendingSort) {
+      return a.date - b.date;
+    } else {
+      return b.date - a.date;
+    }
+  });
+
+  updateComments();
+}
+
 commentName.addEventListener("input", validateComment);
 commentMessage.addEventListener("input", validateComment);
 commentButton.addEventListener("click", addComment);
