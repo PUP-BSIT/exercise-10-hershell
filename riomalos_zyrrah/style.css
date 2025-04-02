@@ -98,6 +98,7 @@ fieldset {
   display: flex;
 }
 
+.sort-buttons button,
 .contact-container form button {
   padding: 0.75rem;
   background-color: #4d3158;
@@ -118,6 +119,7 @@ fieldset {
   pointer-events: none;
 }
 
+.sort-buttons button:hover,
 .contact-container form button:hover,
 .comment-form form button:hover {
   background-color: #3b253f;
