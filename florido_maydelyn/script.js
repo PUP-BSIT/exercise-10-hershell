@@ -74,3 +74,14 @@ function clearInput() {
 
 nameInput.addEventListener("input", toggleButton);
 commentInput.addEventListener("input", toggleButton);
+
+let sortToggle = document.getElementById("sort_toggle");
+sortToggle.addEventListener("change", () => {
+  selectSort = sortToggle.value;
+  sortOrder = selectSort;
+  sortComments();
+  displayComments();
+});
+
+sortComments();
+displayComments();
