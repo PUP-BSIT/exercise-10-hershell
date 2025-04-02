@@ -69,4 +69,9 @@ function displayComments(commentsArray) {
   });
 }
 
+function changeSortOrder(order) {
+  sortOrder = order;
+  displayComments(sortComments(comments, sortOrder));
+}
+
 commentForm.addEventListener("submit", appendComment);
