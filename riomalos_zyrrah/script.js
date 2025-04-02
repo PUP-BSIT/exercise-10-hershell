@@ -58,4 +58,15 @@ function sortComments(commentsArray, order = 'asc') {
   });
 }
 
+function displayComments(commentsArray) {
+  commentsSection.innerHTML = "<h3>Comments</h3>";
+
+  commentsArray.forEach(comment => {
+    let newComment = document.createElement("p");
+    newComment.textContent = `${comment.text} - ${comment.author}
+    (${comment.date.toLocaleString()})`;
+    commentsSection.appendChild(newComment);
+  });
+}
+
 commentForm.addEventListener("submit", appendComment);
