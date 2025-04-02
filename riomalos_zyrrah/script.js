@@ -24,7 +24,7 @@ let comments = [
     author: "Durante",
     date: new Date("3/19/2025, 11:57 PM"),
   },
-  { 
+  {
     text: "Wow!",
     author: "Florido",
     date: new Date("3/19/2025, 11:34 PM")
@@ -64,7 +64,7 @@ function displayComments(commentsArray) {
   commentsArray.forEach(comment => {
     let newComment = document.createElement("p");
     newComment.textContent = `${comment.text} - ${comment.author}
-    (${comment.date.toLocaleString()})`;
+        (${comment.date.toLocaleString()})`;
     commentsSection.appendChild(newComment);
   });
 }
