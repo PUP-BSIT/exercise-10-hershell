@@ -2,6 +2,7 @@ const commentName = document.getElementById("comment_name");
 const commentMessage = document.getElementById("comment_form");
 const commentButton = document.getElementById("comment_button");
 const commentContainer = document.getElementById("comment_list");
+const sortType = document.getElementById("sort_type");
 
 const commentData = [
   {
@@ -68,6 +69,16 @@ function sortComments() {
   updateComments();
 }
 
+function clearElement() {
+  addComment();
+  commentName.value = "";
+  commentMessage.value = "";
+  commentButton.disabled = true;
+}
+
 commentName.addEventListener("input", validateComment);
 commentMessage.addEventListener("input", validateComment);
 commentButton.addEventListener("click", addComment);
+sortType.addEventListener("change", sortComments);
+
+sortComments();
