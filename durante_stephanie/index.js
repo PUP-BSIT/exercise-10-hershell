@@ -23,11 +23,9 @@ const commentData = [
 ];
 
 function validateComment() {
-  if (commentName.value.length && commentMessage.value.length) {
-    commentButton.disabled = false;
-  } else {
-    commentButton.disabled = true;
-  }
+  commentButton.disabled = !(
+    commentName.value.trim() && commentMessage.value.trim()
+  );
 }
 
 function addComment() {
