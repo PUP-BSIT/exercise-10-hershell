@@ -1,3 +1,6 @@
+let commentForm = document.querySelector(".comment-form form");
+let commentsSection = document.querySelector(".teammate-comment");
+
 function checkForm() {
   let name = document.getElementById("name_comment").value;
   let comment = document.getElementById("comment").value;
@@ -14,24 +17,38 @@ function checkForm() {
   }
 }
 
-let commentForm = document.querySelector(".comment-form form");
-let commentsSection = document.querySelector(".teammate-comment");
+let comments = [
+  {
+    text: "I hope you reach all your goals!",
+    author: "Durante",
+    date: new Date("3/19/2025, 11:57 PM"),
+  },
+  { 
+    text: "Wow!",
+    author: "Florido",
+    date: new Date("3/19/2025, 11:34 PM")
+  },
+  {
+    text: "Keep up with your goals and this design!",
+    author: "Siervo",
+    date: new Date("3/19/2025, 11:42 PM"),
+  },
+];
 
 function appendComment(event) {
   event.preventDefault();
 
   let name = document.getElementById("name_comment").value;
   let comment = document.getElementById("comment").value;
+  let timestamp = new Date();
 
-  let newComment = document.createElement("p");
-  newComment.textContent = `${comment} -${name}`;
-
-  commentsSection.appendChild(newComment);
+  comments.push({ text: comment, author: name, date: timestamp });
 
   document.getElementById("name_comment").value = "";
   document.getElementById("comment").value = "";
 
   checkForm();
+  displayComments(sortComments(comments, sortOrder));
 }
 
 commentForm.addEventListener("submit", appendComment);
